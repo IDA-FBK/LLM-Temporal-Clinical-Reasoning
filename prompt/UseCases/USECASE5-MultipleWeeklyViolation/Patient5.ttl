@@ -1,0 +1,262 @@
+The Turtle encoded data about the user and the food consumed is:
+
+:Rule-0006 rdf:type fsguid:MonitoringRule ;
+    fsguid:monitors :Patient5 ;
+    fsguid:hasMonitoredValue 30 ;
+    fsguid:hasOperator "Less" ;
+    fsguid:hasRuleId "0006" ;
+    fsguid:monitoredEntity fsfood:FOOD-1900 ;
+    fsguid:monitoredEntityType fscore:Food ;
+    fsguid:timing fstemp:Week .
+
+:Rule-0007 rdf:type fsguid:MonitoringRule ;
+    fsguid:monitors :Patient5 ;
+    fsguid:hasMonitoredValue 30 ;
+    fsguid:hasOperator "Less" ;
+    fsguid:hasRuleId "0007" ;
+    fsguid:monitoredEntity fsfood:FOOD-19014 ;
+    fsguid:monitoredEntityType fscore:Food ;
+    fsguid:timing fstemp:Week .
+
+:Patient5 rdf:type owl:NamedIndividual,
+        fsbarr:Patient,
+        fsuser:User ;
+    fsbarr:hasDiagnosis :DiseaseRelationPatient5-1 ,
+                        :DiseaseRelationPatient5-2 ;
+    fsuser:consumed :Breakfast-P5-1 ,
+                    :Breakfast-P5-3,
+                    :Dinner-P5-6 ;
+    fsuser:hasAge 69 ;
+    rdfs:label "Patient5"@en ,
+               "Paziente5"@it .
+
+:DiseaseRelationPatient5-1 rdf:type owl:NamedIndividual,
+        fsbarr:DiseaseRelation ;
+    fsbarr:hasDisease fsdise:Cardiovascular .
+
+:DiseaseRelationPatient5-2 rdf:type owl:NamedIndividual,
+        fsbarr:DiseaseRelation ;
+    fsbarr:hasDisease fsdise:Diabetes .
+
+:Breakfast-P5-1 rdf:type owl:NamedIndividual ,
+                         fsuser:Breakfast ;
+                fsuser:hasConsumedFood :ConsumedFood-Breakfast-P5-1-FOOD1900 ;
+                fsuser:hasTimestamp "2025-04-21T09:02:14"^^xsd:dateTime .
+
+:Breakfast-P5-3 rdf:type owl:NamedIndividual ,
+                         fsuser:Breakfast ;
+                fsuser:hasConsumedFood :ConsumedFood-Breakfast-P5-3-FOOD1900 ;
+                fsuser:hasTimestamp "2025-04-23T09:01:11"^^xsd:dateTime .
+
+:Dinner-P5-6 rdf:type owl:NamedIndividual ,
+                         fsuser:Dinner ;
+                fsuser:hasConsumedFood :ConsumedFood-Dinner-P5-6-FOOD-19014 ;
+                fsuser:hasTimestamp "2025-04-26T21:03:12"^^xsd:dateTime .
+
+:ConsumedFood-Breakfast-P5-1-FOOD-1900 rdf:type owl:NamedIndividual,
+        fsuser:ConsumedFood ;
+    fsreci:amountFood 20 ;
+    fsuser:hasFood fsfood:FOOD-1900 .
+
+:ConsumedFood-Breakfast-P5-3-FOOD-1900 rdf:type owl:NamedIndividual,
+        fsuser:ConsumedFood ;
+    fsreci:amountFood 20 ;
+    fsuser:hasFood fsfood:FOOD-1900 .
+
+:ConsumedFood-Dinner-P5-6-FOOD-19014 rdf:type owl:NamedIndividual,
+        fsuser:ConsumedFood ;
+    fsreci:amountFood 50 ;
+    fsuser:hasFood fsfood:FOOD-19014 .
+
+###  https://w3id.org/fuskg/food#FOOD-1900
+fsfood:FOOD-1900 rdf:type owl:NamedIndividual ,
+                          fsfood:AnimalFats ;
+                 fscore:hasNutrient fsfood:Alanine_2900 ,
+                                    fsfood:Alcohol_000 ,
+                                    fsfood:AnimalLipid_8340 ,
+                                    fsfood:AnimalProtein_080 ,
+                                    fsfood:ArachidicAcid_000 ,
+                                    fsfood:ArachidonicAcid_000 ,
+                                    fsfood:Arginine_2500 ,
+                                    fsfood:AsparticAcid_6500 ,
+                                    fsfood:BehenicAcid_000 ,
+                                    fsfood:BetaCarotene_45000 ,
+                                    fsfood:Biotin_000 ,
+                                    fsfood:ButyricCaproicCaprylicCapricAcid_782 ,
+                                    fsfood:Calcium_1500 ,
+                                    fsfood:CarbsSoluble_110 ,
+                                    fsfood:Carbs_110 ,
+                                    fsfood:Chlorine_1700 ,
+                                    fsfood:Cholesterol_25000 ,
+                                    fsfood:Copper_005 ,
+                                    fsfood:Cystine_900 ,
+                                    fsfood:DHAAcid_000 ,
+                                    fsfood:DietaryFiber_000 ,
+                                    fsfood:EPAAcid_000 ,
+                                    fsfood:EicosenoicAcid_000 ,
+                                    fsfood:ErucicAcid_000 ,
+                                    fsfood:FolicAcid_000 ,
+                                    fsfood:Fructose_000 ,
+                                    fsfood:Galactose_000 ,
+                                    fsfood:Glucose_000 ,
+                                    fsfood:GlutamicAcid_18700 ,
+                                    fsfood:Glycine_1700 ,
+                                    fsfood:Histidine_2300 ,
+                                    fsfood:Iodine_3800 ,
+                                    fsfood:Iron_000 ,
+                                    fsfood:Isoleucine_4700 ,
+                                    fsfood:Lactose_110 ,
+                                    fsfood:LauricAcid_239 ,
+                                    fsfood:Leucine_8600 ,
+                                    fsfood:LinoleicAcid_157 ,
+                                    fsfood:LinolenicAcid_118 ,
+                                    fsfood:Lipid_8340 ,
+                                    fsfood:Lysine_6600 ,
+                                    fsfood:Magnesium_200 ,
+                                    fsfood:Maltose_000 ,
+                                    fsfood:Manganese_000 ,
+                                    fsfood:Methionine_2000 ,
+                                    fsfood:MonounsaturatedLipid_2372 ,
+                                    fsfood:MyristicAcid_831 ,
+                                    fsfood:MyristoleicAcid_114 ,
+                                    fsfood:Niacin_000 ,
+                                    fsfood:OleicAcid_2068 ,
+                                    fsfood:OtherPolyunsaturatedLipid_000 ,
+                                    fsfood:PalmiticAcid_2086 ,
+                                    fsfood:PalmitoleicAcid_190 ,
+                                    fsfood:PantothenicAcid_004 ,
+                                    fsfood:Phenylalanine_4300 ,
+                                    fsfood:Phosphorus_1600 ,
+                                    fsfood:PolyunsaturatedLipid_275 ,
+                                    fsfood:Potassium_1500 ,
+                                    fsfood:Proline_9000 ,
+                                    fsfood:Protein_080 ,
+                                    fsfood:RetinolEquivalent_80600 ,
+                                    fsfood:SaturatedLipid_4878 ,
+                                    fsfood:Selenium_000 ,
+                                    fsfood:Serine_4900 ,
+                                    fsfood:Sodium_700 ,
+                                    fsfood:Starch_000 ,
+                                    fsfood:StearicAcid_940 ,
+                                    fsfood:Sucrose_000 ,
+                                    fsfood:Sulfur_800 ,
+                                    fsfood:Threonine_4000 ,
+                                    fsfood:Tryptophan_1200 ,
+                                    fsfood:Tyrosine_3400 ,
+                                    fsfood:Valine_5600 ,
+                                    fsfood:VegetableLipid_000 ,
+                                    fsfood:VegetalProtein_000 ,
+                                    fsfood:VitaminA_73100 ,
+                                    fsfood:VitaminB12_000 ,
+                                    fsfood:VitaminB1_000 ,
+                                    fsfood:VitaminB2_000 ,
+                                    fsfood:VitaminB6_000 ,
+                                    fsfood:VitaminC_000 ,
+                                    fsfood:VitaminD_080 ,
+                                    fsfood:VitaminE_200 ,
+                                    fsfood:Zinc_060 ;
+                 fsfood:amountCalories "758.0"^^xsd:double ;
+                 fsfood:amountEnergy "3171.0"^^xsd:double ;
+                 fsfood:amountWater "14.1"^^xsd:double ;
+                 fsfood:ediblePart "100.0"^^xsd:double ;
+                 rdfs:label "Burro"@it ,
+                            "Butter"@en ;
+                 fsfood:foodId "1900" .
+
+###  https://w3id.org/fuskg/food#FOOD-19014
+fsfood:FOOD-19014 rdf:type owl:NamedIndividual ,
+                           fsfood:ChocolateAndCocoa ;
+                  fscore:hasNutrient fsfood:Alanine_000 ,
+                                     fsfood:Alcohol_000 ,
+                                     fsfood:AnimalLipid_2020 ,
+                                     fsfood:AnimalProtein_540 ,
+                                     fsfood:ArachidicAcid_000 ,
+                                     fsfood:ArachidonicAcid_000 ,
+                                     fsfood:Arginine_000 ,
+                                     fsfood:AsparticAcid_000 ,
+                                     fsfood:BehenicAcid_000 ,
+                                     fsfood:BetaCarotene_7500 ,
+                                     fsfood:Biotin_000 ,
+                                     fsfood:ButyricCaproicCaprylicCapricAcid_000 ,
+                                     fsfood:Calcium_27000 ,
+                                     fsfood:CarbsSoluble_5830 ,
+                                     fsfood:Carbs_5830 ,
+                                     fsfood:Chlorine_000 ,
+                                     fsfood:Cholesterol_2300 ,
+                                     fsfood:Copper_000 ,
+                                     fsfood:Cystine_000 ,
+                                     fsfood:DHAAcid_000 ,
+                                     fsfood:DietaryFiber_080 ,
+                                     fsfood:EPAAcid_000 ,
+                                     fsfood:EicosenoicAcid_000 ,
+                                     fsfood:ErucicAcid_000 ,
+                                     fsfood:FolicAcid_1000 ,
+                                     fsfood:Fructose_000 ,
+                                     fsfood:Galactose_000 ,
+                                     fsfood:Glucose_000 ,
+                                     fsfood:GlutamicAcid_000 ,
+                                     fsfood:Glycine_000 ,
+                                     fsfood:Histidine_000 ,
+                                     fsfood:Iodine_000 ,
+                                     fsfood:Iron_020 ,
+                                     fsfood:Isoleucine_000 ,
+                                     fsfood:Lactose_000 ,
+                                     fsfood:LauricAcid_000 ,
+                                     fsfood:Leucine_000 ,
+                                     fsfood:LinoleicAcid_085 ,
+                                     fsfood:LinolenicAcid_023 ,
+                                     fsfood:Lipid_3090 ,
+                                     fsfood:Lysine_000 ,
+                                     fsfood:Magnesium_000 ,
+                                     fsfood:Maltose_000 ,
+                                     fsfood:Manganese_000 ,
+                                     fsfood:Methionine_000 ,
+                                     fsfood:MonounsaturatedLipid_989 ,
+                                     fsfood:MyristicAcid_000 ,
+                                     fsfood:MyristoleicAcid_000 ,
+                                     fsfood:Niacin_020 ,
+                                     fsfood:OleicAcid_972 ,
+                                     fsfood:OtherPolyunsaturatedLipid_000 ,
+                                     fsfood:PalmiticAcid_000 ,
+                                     fsfood:PalmitoleicAcid_000 ,
+                                     fsfood:PantothenicAcid_000 ,
+                                     fsfood:Phenylalanine_000 ,
+                                     fsfood:Phosphorus_23000 ,
+                                     fsfood:PolyunsaturatedLipid_108 ,
+                                     fsfood:Potassium_35000 ,
+                                     fsfood:Proline_000 ,
+                                     fsfood:Protein_800 ,
+                                     fsfood:RetinolEquivalent_2600 ,
+                                     fsfood:SaturatedLipid_1802 ,
+                                     fsfood:Selenium_000 ,
+                                     fsfood:Serine_000 ,
+                                     fsfood:Sodium_11000 ,
+                                     fsfood:Starch_000 ,
+                                     fsfood:StearicAcid_000 ,
+                                     fsfood:Sucrose_000 ,
+                                     fsfood:Sulfur_000 ,
+                                     fsfood:Threonine_000 ,
+                                     fsfood:Tryptophan_000 ,
+                                     fsfood:Tyrosine_000 ,
+                                     fsfood:Valine_000 ,
+                                     fsfood:VegetableLipid_1070 ,
+                                     fsfood:VegetalProtein_260 ,
+                                     fsfood:VitaminA_1300 ,
+                                     fsfood:VitaminB12_000 ,
+                                     fsfood:VitaminB1_008 ,
+                                     fsfood:VitaminB2_049 ,
+                                     fsfood:VitaminB6_007 ,
+                                     fsfood:VitaminC_000 ,
+                                     fsfood:VitaminD_000 ,
+                                     fsfood:VitaminE_114 ,
+                                     fsfood:Zinc_090 ;
+                  fsfood:amountCalories "529.0"^^xsd:double ;
+                  fsfood:amountEnergy "2213.0"^^xsd:double ;
+                  fsfood:amountWater "0.6"^^xsd:double ;
+                  fsfood:ediblePart "100.0"^^xsd:double ;
+                  rdfs:label "Cioccolato Bianco"@it ,
+                             "White Chocolate"@en ;
+                  fsfood:foodId "19014" .
+
+
+

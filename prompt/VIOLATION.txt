@@ -1,0 +1,151 @@
+The Turtle description of the structure of a violation is:
+
+###  https://w3id.org/fuskg/user#Violation
+fsuser:Violation rdf:type owl:Class ;
+	rdfs:comment "This concept represents violations associated with a specific user. Instances of the Violation concept can be the result of reasoning activities provided by third-party applications."@en ;
+	rdfs:label "Violation"@en ,
+                            "Violazione"@it .
+
+###  https://w3id.org/fuskg/user#ViolationInterval
+fsuser:ViolationInterval rdf:type owl:Class ;
+	rdfs:comment "This concept is used for defining tollerances associated with Violation instances. These tollerances can be used for computing the gravity of each violation."@en ;
+ 	rdfs:label "Intervalli di Violazione"@it ,
+                              "Violation Interval"@en .
+
+###  https://w3id.org/fuskg/user#hasViolationMeal
+fsuser:hasViolationMeal rdf:type owl:ObjectProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range fsuser:Meal ;
+	rdfs:comment "This property specifies which Meal triggered the violation."@en ;
+	rdfs:label "ha violazione sul pasto"@it ,
+                            "has violation on Meal"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationRule
+fsuser:hasViolationRule rdf:type owl:ObjectProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range fsguid:MonitoringRule ;
+	rdfs:comment "This property specifies which rule is violated."@en ;
+	rdfs:label "ha violazione sulla regola"@it ,
+                            "has violation on rule"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationUser
+fsuser:hasViolationUser rdf:type owl:ObjectProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range fsuser:User ;
+	rdfs:comment "This property specifies which User the violation refers to."@en ;
+	rdfs:label "ha violazione per l'utente"@it ,
+		    "has violation User"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationEndTime
+fsuser:hasViolationEndTime rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:dateTimeStamp ;
+	rdfs:comment "This property specifies the time at which the violation ends."@en ;
+	rdfs:label "ha orario di fine violazione"@it ,
+		    "has violation end time"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationEntity
+fsuser:hasViolationEntity rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range [ rdf:type owl:Class ; owl:unionOf ( fsfood:Beverages fsfood:CerealAndGrainProducts fsfood:CulinaryHerbs fsfood:Eggs fsfood:FatsAndOils fsfood:FishAndSeafood fsfood:Fruits fsfood:Meat fsfood:MilkAndDairyProducts fsfood:Mushrooms fsfood:NutSeedAndOlivesProducts fsfood:Salt fsfood:SausagesAndColdCuts fsfood:Spices fsfood:SugarAndSweets fsfood:VegetablesAndLegumes fsfood:Broth fsfood:Alcohol fsfood:Aminoacid fsfood:Carbs fsfood:DietaryFiber fsfood:Lipid fsfood:Mineral fsfood:Mineral fsfood:Protein fsfood:Vitamin ) ] ;
+	rdfs:comment "This property specifies the entity of the violation."@en ;
+	rdfs:label "ha entita' di violazine"@it ,
+                            "has violation entity"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationEntityType
+fsuser:hasViolationEntityType rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range [ rdf:type owl:Class ; owl:unionOf ( fscore:Food fscore:Nutrient ) ] ;
+	rdfs:comment "This property specifies the entity type of the violation."@en ;
+	rdfs:label "ha tipologia di entita' di violazione"@it ,
+ 		    "has violation entity type"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationExpectedQuantity
+fsuser:hasViolationExpectedQuantity rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:double ;
+	rdfs:comment "This property specifies the expected quantity of the violation."@en ;
+	rdfs:label "ha quantita' di violazione attesa"@it ,
+                                               "has violation expected quantity"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationHistory
+fsuser:hasViolationHistory rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:integer ;
+	rdfs:comment "This property specifies the gistory of the violation as an integer."@en ;
+	rdfs:label "ha storia di violazione"@it ,
+		     "has violation history"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationLevel
+fsuser:hasViolationLevel rdf:type owl:DatatypeProperty ;
+	rdfs:domain [ rdf:type owl:Class ;
+                                       owl:unionOf ( fsuser:Violation
+                                                     fsuser:ViolationInterval
+                                                   )
+                                 ] ;
+	rdfs:range xsd:integer ;
+	rdfs:comment "This property specifies the level of the violation."@en ;
+	rdfs:label "ha livello di violazione"@it ,
+		    "has violation level"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationPriority
+fsuser:hasViolationPriority rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:integer ;
+	rdfs:comment "This property specifies the the priority of the violation as an integer."@en ;
+	rdfs:label "ha priorita' di violazione"@it ,
+		     "has violation priority"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationQuantity
+fsuser:hasViolationQuantity rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:double ;
+            rdfs:comment "This property specifies the quantity of the violation."@en ;
+            rdfs:label "ha quantita' di violazione"@it ,
+                             "has violation quantity"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationRuleId
+fsuser:hasViolationRuleId rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:int ;
+	rdfs:comment "This property specifies the id of the rule violated."@en ;
+            rdfs:label "ha id della regola violata"@it ,
+ 		     "has violation rule id"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationStartTime
+fsuser:hasViolationStartTime rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range xsd:dateTimeStamp ;
+            rdfs:comment "This property specifies the the time at which the violation started."@en ;
+            rdfs:label "ha orario di inizio violazione"@it ,
+                             "has violation start time"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationTiming
+fsuser:hasViolationTiming rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+            rdfs:range [ rdf:type owl:Class ; owl:unionOf ( fstemp:Week fstemp:Day fstemp:Meal ) ] ;
+            rdfs:comment "This property specifies the timing of the violation."@en ;
+            rdfs:label "ha tempistica della violazione"@it ,
+                       	     "has violation timing"@en .
+
+
+###  https://w3id.org/fuskg/user#hasViolationValidityTimespan
+fsuser:hasViolationValidityTimespan rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsuser:Violation ;
+	rdfs:range  xsd:dateTimeStamp ;
+	rdfs:comment "This property specifies the timespan during which the violation is valid."@en ;
+	rdfs:label "ha arco temporale di validita' di violazione"@it ,
+	"has violation validity timespan"@en .

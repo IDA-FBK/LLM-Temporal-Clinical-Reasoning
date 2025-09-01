@@ -1,0 +1,13 @@
+I will give you a description of the structure of a monitoring rule and a violation along with data related to a specific user. 
+
+I will provide you as input:
+- The Turtle description of  the structure of a monitoring rule.
+- The Turtle description of the structure of a violation.
+- The Turtle encoded data about the user and the food consumed.
+- The timestamp at which the week starts and the timestamp when the temporal check of the monitoring rules takes place.
+
+After you have received the input, your task is:
+   1. Reason and Decide: Determine if a violation occurred based on the provided data. Provide a YES/NO answer and explain the reason for your decision.
+   2. Generate Two Explanations:
+       - One detailed explanation for the user, using simple and comprehensible language.
+       - One detailed explanation for the physician, using precise and professional terminology.

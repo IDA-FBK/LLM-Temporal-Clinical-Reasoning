@@ -1,0 +1,134 @@
+The Turtle encoded data about the user and the food consumed is:
+
+:Rule-0001 rdf:type fsguid:MonitoringRule ;
+    fsguid:monitors :Patient1 ;
+    fsguid:hasMonitoredValue 100 ;
+    fsguid:hasOperator "Greater" ;
+    fsguid:hasRuleId "0001" ;
+    fsguid:monitoredEntity fsfood:FOOD-19018 ;
+    fsguid:monitoredEntityType fscore:Food ;
+    fsguid:timing fstemp:Meal .
+
+:Patient1 rdf:type owl:NamedIndividual,
+        fsbarr:Patient,
+        fsuser:User ;
+    fsbarr:hasDiagnosis :DiseaseRelationPatient1-1 ;
+    fsuser:consumed :Lunch-P1-1 ;
+    fsuser:hasAge 61 ;
+    rdfs:label "Patient1"@en ,
+               "Paziente1"@it .
+
+:DiseaseRelationPatient1-1 rdf:type owl:NamedIndividual,
+        fsbarr:DiseaseRelation ;
+    fsbarr:hasDisease fsdise:Cardiovascular .
+
+:Lunch-P1-1 rdf:type owl:NamedIndividual ,
+                         fsuser:Lunch ;
+                fsuser:hasConsumedFood :ConsumedFood-Lunch-P1-1-FOOD-19018 ;
+                fsuser:hasTimestamp "2025-03-24T12:16:33"^^xsd:dateTime .
+
+:ConsumedFood-Lunch-P1-FOOD-19018 rdf:type owl:NamedIndividual,
+        fsuser:ConsumedFood ;
+    fsreci:amountFood 150 ;
+    fsuser:hasFood fsfood:FOOD-19018 .
+
+###  https://w3id.org/fuskg/food#FOOD-19018
+fsfood:FOOD-19018 rdf:type owl:NamedIndividual ,
+                           fsfood:SpecialBread ;
+                  fscore:hasNutrient fsfood:Alanine_000 ,
+                                     fsfood:Alcohol_000 ,
+                                     fsfood:AnimalLipid_000 ,
+                                     fsfood:AnimalProtein_000 ,
+                                     fsfood:ArachidicAcid_000 ,
+                                     fsfood:ArachidonicAcid_000 ,
+                                     fsfood:Arginine_000 ,
+                                     fsfood:AsparticAcid_000 ,
+                                     fsfood:BehenicAcid_000 ,
+                                     fsfood:BetaCarotene_000 ,
+                                     fsfood:Biotin_000 ,
+                                     fsfood:ButyricCaproicCaprylicCapricAcid_000 ,
+                                     fsfood:Calcium_3100 ,
+                                     fsfood:CarbsSoluble_310 ,
+                                     fsfood:Carbs_6570 ,
+                                     fsfood:Chlorine_000 ,
+                                     fsfood:Cholesterol_000 ,
+                                     fsfood:Copper_000 ,
+                                     fsfood:Cystine_000 ,
+                                     fsfood:DHAAcid_000 ,
+                                     fsfood:DietaryFiber_1650 ,
+                                     fsfood:EPAAcid_000 ,
+                                     fsfood:EicosenoicAcid_000 ,
+                                     fsfood:ErucicAcid_000 ,
+                                     fsfood:FolicAcid_2200 ,
+                                     fsfood:Fructose_000 ,
+                                     fsfood:Galactose_000 ,
+                                     fsfood:Glucose_000 ,
+                                     fsfood:GlutamicAcid_000 ,
+                                     fsfood:Glycine_000 ,
+                                     fsfood:Histidine_000 ,
+                                     fsfood:Iodine_000 ,
+                                     fsfood:Iron_240 ,
+                                     fsfood:Isoleucine_000 ,
+                                     fsfood:Lactose_000 ,
+                                     fsfood:LauricAcid_000 ,
+                                     fsfood:Leucine_000 ,
+                                     fsfood:LinoleicAcid_048 ,
+                                     fsfood:LinolenicAcid_008 ,
+                                     fsfood:Lipid_130 ,
+                                     fsfood:Lysine_000 ,
+                                     fsfood:Magnesium_000 ,
+                                     fsfood:Maltose_000 ,
+                                     fsfood:Manganese_000 ,
+                                     fsfood:Methionine_000 ,
+                                     fsfood:MonounsaturatedLipid_017 ,
+                                     fsfood:MyristicAcid_000 ,
+                                     fsfood:MyristoleicAcid_000 ,
+                                     fsfood:Niacin_100 ,
+                                     fsfood:OleicAcid_015 ,
+                                     fsfood:OtherPolyunsaturatedLipid_000 ,
+                                     fsfood:PalmiticAcid_000 ,
+                                     fsfood:PalmitoleicAcid_000 ,
+                                     fsfood:PantothenicAcid_000 ,
+                                     fsfood:Phenylalanine_000 ,
+                                     fsfood:Phosphorus_26900 ,
+                                     fsfood:PolyunsaturatedLipid_056 ,
+                                     fsfood:Potassium_31900 ,
+                                     fsfood:Proline_000 ,
+                                     fsfood:Protein_790 ,
+                                     fsfood:RetinolEquivalent_000 ,
+                                     fsfood:SaturatedLipid_015 ,
+                                     fsfood:Selenium_000 ,
+                                     fsfood:Serine_000 ,
+                                     fsfood:Sodium_26400 ,
+                                     fsfood:Starch_6260 ,
+                                     fsfood:StearicAcid_000 ,
+                                     fsfood:Sucrose_000 ,
+                                     fsfood:Sulfur_000 ,
+                                     fsfood:Threonine_000 ,
+                                     fsfood:Tryptophan_000 ,
+                                     fsfood:Tyrosine_000 ,
+                                     fsfood:Valine_000 ,
+                                     fsfood:VegetableLipid_130 ,
+                                     fsfood:VegetalProtein_790 ,
+                                     fsfood:VitaminA_000 ,
+                                     fsfood:VitaminB12_000 ,
+                                     fsfood:VitaminB1_024 ,
+                                     fsfood:VitaminB2_015 ,
+                                     fsfood:VitaminB6_021 ,
+                                     fsfood:VitaminC_000 ,
+                                     fsfood:VitaminD_000 ,
+                                     fsfood:VitaminE_136 ,
+                                     fsfood:Zinc_240 ;
+                  fsfood:amountCalories "366.0"^^xsd:double ;
+                  fsfood:amountEnergy "1531.0"^^xsd:double ;
+                  fsfood:amountWater "6.1"^^xsd:double ;
+                  fsfood:ediblePart "100.0"^^xsd:double ;
+                  rdfs:label "Pane di Segale Integrale a Fette"@it ,
+                             "Sliced Whole Wheat Rye Bread"@en ;
+                  fsfood:foodId "19018" .
+
+
+
+
+
+

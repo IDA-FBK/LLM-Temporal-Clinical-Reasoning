@@ -1,0 +1,77 @@
+The Turtle description of the structure of a monitoring rule is:
+
+###  https://w3id.org/fuskg/guidelines#MonitoringRule
+fsguid:MonitoringRule rdf:type owl:Class ;
+	rdfs:comment "This concept enables the definition of rules that can be associated to a specific user or to a specific profile in order to support monitoring activities."@en ;
+ 	rdfs:label "Monitoring Rule"@en ,
+                            "Regole di Monitoraggio"@it .
+
+###  https://w3id.org/fuskg/guidelines#ValueInterval
+fsguid:ValueInterval rdf:type owl:Class ;
+          rdfs:comment "This concept enables the definition of numerical intervals of the form [lowerBound, upperBound] that can be associated with an instance of the MonitoringRule concept."@en ;
+	rdfs:label "Intervalli"@it ,
+		    "Value Interval"@en .
+
+###  https://w3id.org/fuskg/user#User
+fsuser:User rdf:type owl:Class ;
+	rdfs:comment "This is the root concept for the User branch. All sub-concepts represent a specific category of users, if necessary."@en ;
+            rdfs:label "User"@en ,
+                             "Utente"@it .
+
+###  https://w3id.org/fuskg/guidelines#monitors
+fsguid:monitors rdf:type owl:ObjectProperty ;
+ 	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range fsuser:User ;
+ 	rdfs:comment "This property specifies the subject of a MonitoringRule."@en ;
+	rdfs:label "monitora"@it ,
+                            "monitors"@en .
+
+###  https://w3id.org/fuskg/guidelines#hasMonitoredValueInterval
+fsguid:hasMonitoredValueInterval rdf:type owl:ObjectProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range fsguid:ValueInterval ;
+	rdfs:comment "This property specifies the subject of a MonitoringRule."@en .
+
+###  https://w3id.org/fuskg/guidelines#hasRuleDefinition
+fsguid:hasRuleDefinition rdf:type owl:DatatypeProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range xsd:string ;
+	rdfs:comment "This property specifies the monitored value of a MonitoringValueInterval."@en ;
+	rdfs:label "ha definizione della regola"@it ,
+		     "has rule definition"@en .
+
+###  https://w3id.org/fuskg/guidelines#hasMonitoredValue
+fsguid:hasMonitoredValue rdf:type owl:AnnotationProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+            rdfs:range xsd:double ;
+	rdfs:comment "This property specifies the monitored value of a MonitoringRule."@en .
+
+###  https://w3id.org/fuskg/guidelines#timing
+fsguid:timing rdf:type owl:AnnotationProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range [ rdf:type owl:Class ; owl:unionOf ( fstemp:Week fstemp:Day fstemp:Meal ) ] ; 
+	rdfs:comment "This property defines the frequency associated with a MonitoringRule."@en .
+
+###  https://w3id.org/fuskg/guidelines#hasOperator
+fsguid:hasOperator rdf:type owl:AnnotationProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range xsd:string ;
+	rdfs:comment "This property specifies the operator (e.g., Greater, Less) for a monitored value within a MonitoringRule"@en .
+
+###  https://w3id.org/fuskg/guidelines#hasRuleId
+fsguid:hasRuleId rdf:type owl:AnnotationProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+            rdfs:range xsd:string ;
+	rdfs:comment "This property specifies the unique identifier for a MonitoringRule."@en .
+
+###  https://w3id.org/fuskg/guidelines#monitoredEntity
+fsguid:monitoredEntity rdf:type owl:AnnotationProperty ;
+	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range [ rdf:type owl:Class ; owl:unionOf ( fsfood:Beverages fsfood:CerealAndGrainProducts fsfood:CulinaryHerbs fsfood:Eggs fsfood:FatsAndOils fsfood:FishAndSeafood fsfood:Fruits fsfood:Meat fsfood:MilkAndDairyProducts fsfood:Mushrooms fsfood:NutSeedAndOlivesProducts fsfood:Salt fsfood:SausagesAndColdCuts fsfood:Spices fsfood:SugarAndSweets fsfood:VegetablesAndLegumes fsfood:Broth fsfood:Alcohol fsfood:Aminoacid fsfood:Carbs fsfood:DietaryFiber fsfood:Lipid fsfood:Mineral fsfood:Mineral fsfood:Protein fsfood:Vitamin ) ] ; 
+	rdfs:comment "This property identifies the entity being monitored by a MonitoringRule."@en .
+
+###  https://w3id.org/fuskg/guidelines#monitoredEntityType
+fsguid:monitoredEntityType rdf:type owl:AnnotationProperty ;
+`	rdfs:domain fsguid:MonitoringRule ;
+	rdfs:range [ rdf:type owl:Class ; owl:unionOf ( fscore:Food fscore:Nutrient ) ] ;
+	rdfs:comment "This property specifies the type of entity being monitored by a MonitoringRule."@en . 

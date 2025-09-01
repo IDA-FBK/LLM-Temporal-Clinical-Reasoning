@@ -1,0 +1,1 @@
+Week starts at 2025-04-14T00:00:00^^xsd:dateTime - Temporal check at: 2025-04-20T23:59:59^^xsd:dateTime
